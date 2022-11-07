@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.wrapper {
+  height: calc(var(--vh, 1vh) * 100);
+}
+

@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+.conversion:not(.opened) {
+    display: none;
+}
+
+.conversion.opened {
+    display: block;
+}
+
+.conversion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, .5);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* .conversion.opened + .workspace {
+  -webkit-filter: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
+  -webkit-filter: blur(.5rem);
+  -ms-filter: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
+  -ms-filter: blur(.5rem);
+  filter: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz4KICAgIDwvZmlsdGVyPgo8L3N2Zz4=#blur");
+  filter: blur(.5rem);
+} */
+
+.conversion > div {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 100%;
+}
+
+.form {
+    background-color: #FFFFFF;
+}
+
+.form,
+.form > div,
+.form > div > span,
+.form > div > form,
+.form > div > form > ul > li > div {
+    position: relative;
+}
+
+.form > div > span {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.form.success > div > form,
+.form.success > div > span,
+.form.success > div > p,
+.form:not(.success) > div > span + span,
+.form:not(.success) > div > p {
+    display: none;
+}
+
+.form:not(.success) > div > form,
+.form:not(.success) > div > span,
+.form.success > div > span + span,
+.form.success > div > p + p {
+    display: block;
+}
+
+.form > div > form > ul,
+.form > div > form > ol {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.form > div > form > ul > li,
+.form > div > form > ol > li {
+    width: 100%;
+    margin: inherit;
+    background-color: inherit;
+}
+
+.form > div > form > ul > li > div {
+    display: flex;
+    min-height: 6rem;
+    margin-bottom: 3rem;
+}
+
+.form > div > form > ul > li > div > label {
+    display: block;
+    width: 100%;
+}
+
+.form > div > form > ul > li > div > label > textarea,
+.form > div > form > ul > li > div > label > input[type=text],
+.form > div > form > ul > li > div > label > input[type=email],
+.form > div > form > ul > li > div > label > input[type=tel] {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 6rem;
+    padding-right: 0;
+    background-color: #FFFFFF;
+    color: rgba(50, 50, 50, 1);
+    border: solid .125rem #B4B4B4;
+    font-family: "content";
+    font-size: 2rem;
+    line-height: 3rem;
+    border-radius: .5rem;
+    transition: all .25s ease-in-out;
+}
+
+.form > div > form > ul > li > div > label > input[type=text],
+.form > div > form > ul > li > div > label > input[type=email],
+.form > div > form > ul > li > div > label > input[type=tel] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.form > div > form > ul > li > div > label > textarea {
+    padding-top: calc(1.5rem - 1px);
+    padding-bottom: calc(1.5rem - 1px);
+    min-height: 13rem;
+    resize: none;
+}
+
+.form > div > form > ul > li > div > label > textarea + span,
+.form > div > form > ul > li > div > label > input[type=text] + span,
+.form > div > form > ul > li > div > label > input[type=email] + span,
+.form > div > form > ul > li > div > label > input[type=tel] + span {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1.5rem;
+    left: 6rem;
+    z-index: 5;
+    height: 3rem;
+    white-space: nowrap;
+    transition: all .25s ease-in-out;
+}
+
+.form > div > form > ul > li > div > label > input[type=text]:focus + span,
+.form > div > form > ul > li > div > label > input[type=email]:focus + span,
+.form > div > form > ul > li > div > label > input[type=tel]:focus + span,
+.form > div > form > ul > li > div > label > textarea:focus + span,
+.form > div > form > ul > li > div > label.selected > input[type=text] + span,
+.form > div > form > ul > li > div > label.selected > input[type=email] + span,
+.form > div > form > ul > li > div > label.selected > input[type=tel] + span,
+.form > div > form > ul > li > div > label.selected > textarea + span {
+    transform: scale(0, 0);
+}
+
+.form > div > form > ul > li > div > label > textarea:focus,
+.form > div > form > ul > li > div > label > input:focus {
+    border: solid .125rem #323232;
+}
+
+.form > div > form > ul > li > div > label > input.field.error {
+    border: solid .125rem #FF0000;
+}
+
+.form > div > form > ul > li > div > label > textarea + span > span,
+.form > div > form > ul > li > div > label > input[type=text] + span > span,
+.form > div > form > ul > li > div > label > input[type=email] + span > span,
+.form > div > form > ul > li > div > label > input[type=tel] + span > span {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #B4B4B4;
+}
+
+.form > div > form > ul > li > div.icon::after {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    content: "";
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.form > div > form > ul > li > div.icon.name::after {
+    background-image: url(../img/name.svg);
+}
+
+.form > div > form > ul > li > div.icon.email::after {
+    background-image: url(../img/email.svg);
+}
+
+.form > div > form > ul > li > div.icon.message::after {
+    background-image: url(../img/message.svg);
+}
+
+
+.form > div > form > ol > li > div > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position: relative;
+    height: 6rem;
+    padding: 0 3rem;
+    border: 0;
+    border-radius: .5rem;
+    background-color: rgba(253, 8, 0, 1);
+    color: #FFF;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+    font-family: "content";
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.form > div > form > ol > li > div > button:hover {
+    background-color: rgba(50, 50, 50, 1);
+}
+
+.form > div > form > ol > li > div > button > span:first-child {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+@media (min-width : 1441px) {
+    .form {
+        width: 40rem;
+    }
+
+    .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > span {
+        font-size: 4rem;
+    }
+
+    .form > div > p {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width : 1201px) and (max-width : 1440px) {
+
+    .form {
+        width: 40rem;
+    }
+    
+     .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > span {
+        font-size: 3.8rem;
+    }
+
+    .form > div > p {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+    .form {
+        width: 40rem;
+    }
+    
+     .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > span {
+        font-size: 3.6rem;
+    }
+
+    .form > div > p {
+        font-size: 2.6rem;
+    }
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+    .form {
+        width: 40rem;
+    }
+    
+     .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > span {
+        font-size: 3.4rem;
+    }
+
+    .form > div > p {
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+    .form {
+        width: 40rem;
+    }
+
+    .form > div > span {
+        font-size: 3.2rem;
+    }
+    
+     .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width : 480px) {
+    .form {
+        width: 100%;
+    }
+    
+     .form > .fields {
+        padding: 13rem 4rem 8rem 4rem;
+    }
+
+    .form > div > span {
+        font-size: 3rem;
+    }
+
+    .form > div > p {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+}
+
+.menu > ul {
+    align-items: center;
+    min-height: inherit;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu > ul > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu > ul > .selected::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #3A86C7;
+    content: "";
+    width: 100%;
+    height: 4px;
+}
+
+.menu > ul > li:not(:first-child) {
+    margin-left: 4rem;
+}
+
+.menu > ul > li > a {
+    text-decoration: none;
+}
+
+.menu > button > span + span,
+.menu > ul > li > a > span,
+.menu > ul > li > span > span {
+    color: #171D2B;
+    font-weight: 600;
+    transition: color .25s ease-in-out;
+}
+
+.menu > ul > li > a:hover > span {
+    color: #3A86C7;
+}
+
+.menu > button {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+    cursor: pointer;
+    height: 5rem;
+    min-width: 5rem;
+}
+
+.menu > button:hover {
+    opacity: 0.8;
+}
+
+.menu > button > span:first-child {
+    width: 100%;
+    height: inherit;
+    background-image: url(../img/mailSend.svg);
+    background-repeat: no-repeat;
+    background-size: 4rem 3rem;
+    background-position: 100% 50%;
+    transition: opacity .25s ease-in-out;
+    min-width: 4rem;
+}
+
+.menu > button > span + span {
+    margin-left: 1.25rem;
+    font-family: "content", sans-serif;
+    font-size: 1.75rem;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.request {
+    align-items: center;
+}
+
+.favorites {
+    text-decoration: none;
+    position: relative;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.favorites > .star {
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    background-position: 50% 50%;
+    transition: opacity .25s ease-in-out;
+    display: block;
+}
+
+.favorites:not(.selected) > .star {
+    background-image: url(../img/favorites.svg);
+}
+
+.favorites.selected > .star {
+    background-image: url(../img/star2.svg);
+}
+
+.favorites > .informer {
+    position: absolute;
+    background-color: #97C33E;
+    bottom: calc(0% + 2.2rem);
+    right: calc(100% - 5.6rem);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.favorites:not(.selected) > .informer {
+    display: none;
+}
+
+.favorites > .informer > span {
+    font-size: 1.75rem;
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (min-width : 1201px) {
+    .menu > ul {
+        display: flex;
+    }
+
+    .menu > button {
+        padding: 1rem 2.5rem;
+        margin: 0 0 0 2.5rem;
+        border: 0;
+        background-color: #3A86C7;
+        border-radius: .75rem;
+    }
+    
+    .menu > button > span:first-child {
+        background-image: url(../img/mailSend.svg);
+    }
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+    .menu > ul {
+        display: none;
+    }
+
+    .menu > button {
+        padding: 1rem 2.5rem;
+        margin: 0 0 0 2.5rem;
+        border: 0;
+        background-color: #3A86C7;
+        border-radius: .75rem;
+    }
+    
+    .menu > button > span:first-child {
+        background-image: url(../img/mailSend.svg);
+    }
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+    .menu:not(.request) {
+        margin-right: 2rem;
+    }
+
+    .menu > ul {
+        display: none;
+    }
+
+    .menu > button {
+        padding: 1rem 2.5rem;
+        margin: 0 0 0 2.5rem;
+        border: 0;
+        background-color: #3A86C7;
+        border-radius: .75rem;
+    }
+    
+    .menu > button > span:first-child {
+        background-image: url(../img/mailSend.svg);
+    }
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+
+    .menu > button > span + span,
+    .menu > ul {
+        display: none;
+    }
+
+    .menu > button {
+        padding: 0;
+        margin: 0 0 0 1rem;
+        border: 0;
+        background-color: #FFF;
+        border-radius: 0;
+    }
+
+    .menu > button > span:first-child {
+        background-image: url(../img/mailSen2.svg);
+    }
+
+    .menu > button:hover > span:first-child {
+        opacity: 1;
+    }
+
+    .favorites > .star {
+        margin-right: 0;
+    }
+}
+
+@media (max-width : 480px) {
+
+    .menu > button > span + span,
+    .menu > ul {
+        display: none;
+    }
+
+    .menu > button {
+        padding: 0;
+        margin: 0 0 0 1rem;
+        border: 0;
+        background-color: #FFF;
+        border-radius: 0;
+    }
+
+    .menu > button > span:first-child {
+        background-image: url(../img/mailSen2.svg);
+    }
+
+    .menu > button:hover > span:first-child {
+        opacity: 1;
+    }
+
+    .favorites > .star {
+        margin-right: 0;
+    }
+}

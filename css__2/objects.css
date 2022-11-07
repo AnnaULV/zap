@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+.objects {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oneobject {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: .75rem;
+    overflow: hidden;
+}
+
+.oneobject > .photo {
+    padding-top: 66%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+}
+
+.oneobject > .details {
+    height: 100%;
+    background-color: #FFF;
+    padding: 2rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.oneobject > .details > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+
+.oneobject > .details > div:first-child > .category {
+    padding: .5rem 2rem;
+    border: 1px solid #747780;
+    border-radius: .75rem;
+    color: #747780;
+}
+
+.oneobject > .details > div:nth-child(2) {
+    height: calc(100% - 10rem);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.oneobject > .details > div:nth-child(2) > div:first-child {
+    padding-top: 2rem;
+    font-weight: 700;
+    display: block;
+}
+
+.oneobject > .details > div:nth-child(2) > div:last-child > ul {
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.oneobject > .details > div:nth-child(2) > div:last-child > ul > li {
+    position: relative;
+    padding-left: 3rem;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 2rem 2rem;
+}
+
+.oneobject > .details > div:nth-child(2) > div:last-child > ul > li > span {
+    font-size: 1.75rem;
+    color: #747780;
+}
+
+.btn {
+    padding: 0 2.5rem;
+    height: 5rem;
+    position: relative;
+    border: 0;
+    border-radius: .75rem;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn > span {
+    font-family: "content";
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.btn > span::after {
+    content: "\20BD/год";
+    padding-left: .5rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.blue {
+    background-color: #3A86C7;
+}
+
+.green {
+    background-color: #97C33E;
+}
+
+@media (min-width : 1441px) {
+    .objects {
+        left: -1.25rem;
+        width: calc(100% + 2.5rem);
+    }
+
+    .oneobject {
+        margin: 1.25rem;
+        width: calc(25% - 2.5rem);
+    }
+}
+
+@media (min-width : 1201px) and (max-width : 1440px) {
+    .objects {
+        left: -1.25rem;
+        width: calc(100% + 2.5rem);
+    }
+
+    .oneobject {
+        margin: 1.25rem;
+        width: calc(25% - 2.5rem);
+    }
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+    .objects {
+        left: -1.25rem;
+        width: calc(100% + 2.5rem);
+    }
+
+    .oneobject {
+        margin: 1.25rem;
+        width: calc(25% - 2.5rem);
+    }
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+    .objects {
+        left: -1.25rem;
+        width: calc(100% + 2.5rem);
+    }
+
+    .oneobject {
+        margin: 1.25rem;
+        width: calc(33.3333% - 2.5rem);
+    }
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+    .objects {
+        left: -.625rem;
+        width: calc(100% + 1.25rem);
+    }
+
+    .oneobject {
+        margin: .625rem;
+        width: calc(50% - 1.25rem);
+    }
+}
+
+@media (max-width : 480px) {
+    .objects {
+        left: -.625rem;
+        width: calc(100% + 1.25rem);
+    }
+
+    .oneobject {
+        margin: .625rem;
+        width: calc(100% - 1.25rem);
+    }
+}
