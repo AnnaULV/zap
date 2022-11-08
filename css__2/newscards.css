@@ -67,44 +67,6 @@
     bottom: 3rem;
 }
 
-.btn {
-    padding: 0 2.5rem;
-    height: 5rem;
-    position: relative;
-    border: 0;
-    border-radius: .75rem;
-    cursor: pointer;
-    transition: background .25s ease-in-out;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn > span {
-    font-family: "content";
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #FFF;
-}
-
-.btn > span::after {
-    content: "\20BD/год";
-    padding-left: .5rem;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-.blue {
-    background-color: #3A86C7;
-}
-
-.green {
-    background-color: #97C33E;
-}
-
 @media (min-width : 1441px) {
     .newscards {
         left: -1.25rem;
