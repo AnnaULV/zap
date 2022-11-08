@@ -30,35 +30,28 @@
     padding: 2rem 3rem 3rem 3rem;
     display: flex;
     flex-direction: column;
-}
-
-.newscard > .details > div:first-child {
-    height: 3rem;
+    flex-wrap: wrap;
 }
 
 
-.newscard > .details > div:first-child > .date {
+.newscard > .details > span {
     color: #A2A5AA;
     font-size: 1.75rem;
+    display: block;
 }
 
-.newscard > .details > div:nth-child(2) {
-    height: calc(100% - 8rem);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.newscard > .details > div:nth-child(2) > div:first-child {
+.newscard > .details > strong {
     padding-top: 1rem;
     font-weight: 700;
+    display: block; 
 }
 
-.newscard > .details > div:nth-child(2) > div:last-child {
+.newscard > .details > p {
     padding-top: 1rem;
     font-weight: 400;
     font-size: 2rem;
     color: #171D2B;
+    display: block;
 }
 
 .btn {
