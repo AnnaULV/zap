@@ -36,7 +36,6 @@ a:hover {
     max-width: 100vw;
     max-height: 100vh;
     overflow: inherit;
-    position: relative;
 }
 
 .wrapper > span {
