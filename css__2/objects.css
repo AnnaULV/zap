@@ -97,7 +97,7 @@
     font-family: "content";
     font-size: 1.75rem;
     font-weight: 700;
-    color: #FFF;
+    color: #FFFFFF;
 }
 
 .btn > span::after {
@@ -110,7 +110,7 @@
 }
 
 .blue {
-    background-color: #97C33E;
+    background-color: #3A86C7;
 }
 
 .green {
