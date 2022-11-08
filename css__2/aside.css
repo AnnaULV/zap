@@ -5,7 +5,7 @@
     bottom: 0;
     height: 100%;
     transition: right .25s ease-in-out;
-    z-index: 11;
+    z-index: 12;
     background-color: #FFF;
 }
 
@@ -15,6 +15,7 @@
 
 .content {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .form,
