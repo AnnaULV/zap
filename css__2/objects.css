@@ -103,11 +103,6 @@
     width: 100%;
 }
 
-.btn > span::after {
-    content: "\20BD";
-    padding-left: .5rem;
-}
-
 .btn:hover {
     opacity: 0.8;
 }
