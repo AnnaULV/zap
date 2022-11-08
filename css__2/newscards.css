@@ -43,7 +43,7 @@
 .newscard > .details > strong {
     padding-top: 1rem;
     font-weight: 700;
-    display: block; 
+    display: block;
 }
 
 .newscard > .details > p {
@@ -52,6 +52,8 @@
     font-size: 2rem;
     color: #171D2B;
     display: block;
+    padding: 1rem 0 0 0;
+    margin: 0;
 }
 
 .btn {
