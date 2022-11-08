@@ -91,13 +91,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFFFFF;
 }
 
 .btn > span {
     font-family: "content";
     font-size: 1.75rem;
     font-weight: 700;
-    color: #FFFFFF;
 }
 
 .btn > span::after {
