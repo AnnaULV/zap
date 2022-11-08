@@ -35,7 +35,8 @@ a:hover {
     width: 100%;
     max-width: 100vw;
     max-height: 100vh;
-    overflow: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .wrapper > span {
@@ -141,8 +142,8 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
-     h1 {
+
+    h1 {
         font-size: 5.4rem;
     }
 
@@ -174,8 +175,8 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
-      h1 {
+
+    h1 {
         font-size: 5rem;
     }
 
@@ -187,7 +188,8 @@ h3 {
 }
 
 @media (min-width : 961px) and (max-width : 1200px) {
-  .wrapper:not(.conversion) > .aside,
+
+    .wrapper:not(.conversion) > .aside,
     .wrapper:not(.navigation) > .nav {
         right: -40rem;
     }
@@ -206,8 +208,8 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
-     h1 {
+
+    h1 {
         font-size: 4.6rem;
     }
 
@@ -219,7 +221,8 @@ h3 {
 }
 
 @media (min-width : 721px) and (max-width : 960px) {
-  .wrapper:not(.conversion) > .aside,
+
+    .wrapper:not(.conversion) > .aside,
     .wrapper:not(.navigation) > .nav {
         right: -40rem;
     }
@@ -238,7 +241,7 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
+
     h1 {
         font-size: 4.2rem;
     }
@@ -251,7 +254,8 @@ h3 {
 }
 
 @media (min-width : 481px) and (max-width : 720px) {
-     .wrapper:not(.conversion) > .aside,
+
+    .wrapper:not(.conversion) > .aside,
     .wrapper:not(.navigation) > .nav {
         right: -40rem;
     }
@@ -270,8 +274,8 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
-     h1 {
+
+    h1 {
         font-size: 3.8rem;
     }
 
@@ -283,7 +287,8 @@ h3 {
 }
 
 @media (max-width : 480px) {
-     .wrapper:not(.conversion) > .aside,
+
+    .wrapper:not(.conversion) > .aside,
     .wrapper:not(.navigation) > .nav {
         right: -40rem;
     }
@@ -302,7 +307,7 @@ h3 {
     .wrapper.navigation > span {
         display: block;
     }
-    
+
     h1 {
         font-size: 3.8rem;
     }
