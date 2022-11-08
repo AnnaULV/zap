@@ -43,17 +43,28 @@
 .newscard > .details > strong {
     padding-top: 1rem;
     font-weight: 700;
-    display: block;
+      display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .newscard > .details > p {
-    padding-top: 1rem;
     font-weight: 400;
     font-size: 2rem;
     color: #171D2B;
-    display: block;
     padding: 1rem 0 0 0;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.newscard > .details > a {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem 0 0 0;
 }
 
 .btn {
