@@ -121,6 +121,11 @@ h3 {
     padding-bottom: 1rem;
 }
 
+.nav,
+.aside {
+  overflow: hidden;
+}
+
 @media (min-width : 1441px) {
 
     .wrapper:not(.conversion) > .aside,
