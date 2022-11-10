@@ -14,6 +14,10 @@ article > section > .image {
     min-height: 55vh;
 }
 
+article > .section > .center > p:first-child {
+    margin: 3rem 0 3rem 0;
+}
+
 article > .section > .center > p{
   margin: 0 0 3rem 0;
 padding: 0;
@@ -32,6 +36,7 @@ article > .section > .center > p > img {
     font-weight: 600;
     padding: 3rem 0 3rem 0;
 }
+
 
 .prologue > * {
     padding: 0;
