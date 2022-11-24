@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.gallery + .swiper-pagination {
+    position: relative;
+    top: 1.5rem;
+}
+
+/* контейнер */
+.gallery > .swiper-container {
+    /* относительное позиционирование */
+    position: relative;
+}
+
+
+.gallery > .swiper-container > .swiper {
+    width: 100%;
+    height: 100%;
+    /* разрешаем видеть всю ширину экрана */
+    overflow: visible !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+
+.gallery > .swiper-container > .swiper > .swiper-wrapper > .swiper-slide > div {
+    width: 100%;
+    padding-top: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-pagination {
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    cursor: pointer;
+    transition: transform .25s ease-in-out;
+    background-color: #D1D2D5;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active {
+    transform: scale(1.1);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3A86C7;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2rem;
+}
+
+@media (min-width : 1441px) {
+}
+
+@media (min-width : 1201px) and (max-width : 1440px) {
+    
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+    
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+    
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+    
+}
+
+@media (max-width : 480px) {
+    
+}
