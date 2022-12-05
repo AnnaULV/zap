@@ -3,6 +3,7 @@
 .gallery + .swiper-pagination {
     position: relative;
     top: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 /* контейнер */

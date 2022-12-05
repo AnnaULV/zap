@@ -5,6 +5,9 @@ article {
     flex-grow: 1;
 }
 
+.white {
+    background-color: #FFFFFF;
+}
 
 article > section > .image {
     position: relative;

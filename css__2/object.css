@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.characteristics {
+    display: flex;
+    flex-direction: column;
+}
+
+.characteristics > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.characteristics > div:nth-child(2) {
+    padding-top: 3rem;
+}
+
+.characteristics > div:nth-child(2) > div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.definition > div > span {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.definition > div > p {
+    
+}
+
+
